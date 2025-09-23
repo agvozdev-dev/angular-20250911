@@ -1,0 +1,37 @@
+<mat-toolbar>
+    <button
+        matIconButton
+        aria-label="Example icon-button with menu icon"
+        class="example-icon"
+        (click)="menuClick($event)"
+    >
+        <!-- 
+            (click)="menuClick($event)"
+                    |
+                    V
+            el.addEventListener('click', ($event) => {
+                ctx.menuClick($event)
+            });
+        -->
+        <mat-icon>menu</mat-icon>
+    </button>
+    <!-- <img src="./favicon.ico" /> -->
+    <!-- <img src="{{imgUrl}}" /> -->
+    <img [src]="imgUrl" [style.width.px]="30" />
+    <!-- <span>{{'1' + '1'}}</span> -->
+    <!-- <span>{{this.title}}</span> -->
+    <span>{{title}}</span>
+    <span class="example-spacer"></span>
+    <button
+        matIconButton
+        aria-label="Example icon-button with heart icon"
+        class="example-icon favorite-icon"
+    >
+        <mat-icon>favorite</mat-icon>
+    </button>
+    <button matIconButton aria-label="Example icon-button with share icon" class="example-icon">
+        <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar>
+
+<!-- <input (keydown.enter)="onEnter($event)"> -->
