@@ -16,8 +16,4 @@ export class Header {
     menuClick(event: Event) {
         console.log('menu clicked', event);
     }
-
-    // onEnter(event: Event) {
-    //   console.log('Enter', event);
-    // }
 }
