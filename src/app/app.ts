@@ -1,16 +1,11 @@
-import {Component, signal} from '@angular/core';
+import {Component} from '@angular/core';
 import {Header} from './core-components/header/header';
+import {ProductsList} from './pages/products-list/products-list';
 
 @Component({
     selector: 'app-root',
-    // selector: 'div#root',
-    imports: [Header],
+    imports: [Header, ProductsList],
     templateUrl: './app.html',
-    // template: `
-    // <h1>Nihao!</h1>
-    // `,
     styleUrl: './app.css',
 })
-export class App {
-    protected readonly title = signal('angular-20250911');
-}
+export class App {}

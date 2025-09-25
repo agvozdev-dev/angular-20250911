@@ -5,21 +5,9 @@
         class="example-icon"
         (click)="menuClick($event)"
     >
-        <!-- 
-            (click)="menuClick($event)"
-                    |
-                    V
-            el.addEventListener('click', ($event) => {
-                ctx.menuClick($event)
-            });
-        -->
         <mat-icon>menu</mat-icon>
     </button>
-    <!-- <img src="./favicon.ico" /> -->
-    <!-- <img src="{{imgUrl}}" /> -->
-    <img [src]="imgUrl" [style.width.px]="30" />
-    <!-- <span>{{'1' + '1'}}</span> -->
-    <!-- <span>{{this.title}}</span> -->
+    <img class="logo-icon" [src]="imgUrl" />
     <span>{{title}}</span>
     <span class="example-spacer"></span>
     <button
@@ -33,5 +21,3 @@
         <mat-icon>share</mat-icon>
     </button>
 </mat-toolbar>
-
-<!-- <input (keydown.enter)="onEnter($event)"> -->
