@@ -9,14 +9,11 @@ import {MatDrawer, MatDrawerContainer} from '@angular/material/sidenav';
     styleUrl: './sidenav.css',
 })
 export class Sidenav {
-    // protected readonly sidenavOpened = signal(false);
-
     public readonly sidenavOpened = input(false);
 
     public readonly sidenavOpenedChange = output<boolean>();
 
     toggleSidenav() {
-        // this.sidenavOpened.update(opened => !opened);
         this.sidenavOpenedChange.emit(!this.sidenavOpened());
     }
 }
