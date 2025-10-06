@@ -1,0 +1,9 @@
+<mat-drawer-container autosize class="example-container">
+    <mat-drawer mode="side" class="example-sidenav" [opened]="sidenavOpened()">
+        <p>Auto-resizing sidenav</p>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <button type="button" matButton (click)="toggleSidenav()">Toggle sidenav</button>
+    </div>
+</mat-drawer-container>

@@ -1,2 +1,25 @@
-<app-header></app-header>
-<app-products-list></app-products-list>
+<app-header
+    [applicationConfig]="rootApplicationConfig"
+    (menuClick)="onMenuClick($event)"
+></app-header>
+<!-- 
+(menuClick)="onMenuClick()"
+        |
+        V
+ClassInstance.menuClick.subscribe(($event) => {
+    onMenuClick()
+})
+-->
+<!-- <app-header [config]="rootApplicationConfig"></app-header> -->
+<!-- <app-header></app-header> -->
+<!-- <app-products-list></app-products-list> -->
+
+<app-sidenav
+    [sidenavOpened]="sidenavOpenedStore()"
+    (sidenavOpenedChange)="sidenavOpenedStore.set($event)"
+></app-sidenav>
+
+<!-- {{propertyPublic}} -->
+<!-- {{propertyProtected}} -->
+
+<!-- calculateInterpolate(ctx.propertyProtected) -->
