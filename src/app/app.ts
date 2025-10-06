@@ -15,12 +15,6 @@ export type ApplicationConfig = {
     styleUrl: './app.css',
 })
 export class App {
-    // public propertyPublic = 1;
-    // protected propertyProtected = 1;
-    // private propertyPrivate = 1;
-
-    // protected readonly title = 'angular-20250911';
-    // protected readonly imgUrl = './favicon.ico';
     protected readonly rootApplicationConfig: ApplicationConfig = {
         title: 'angular-20250911',
         imgUrl: './favicon.ico',
@@ -33,11 +27,3 @@ export class App {
         this.sidenavOpenedStore.update(opened => !opened);
     }
 }
-
-// const app = new App();
-
-// class ChildApp extends App {
-//     public newProtected = this.propertyProtected
-// }
-
-// app.propertyProtected
