@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
 import {Header} from './core-components/header/header';
 import {ProductsList} from './pages/products-list/products-list';
 import {Sidenav} from './core-components/sidenav/sidenav';
@@ -13,6 +13,7 @@ export type ApplicationConfig = {
     imports: [Header, ProductsList, Sidenav],
     templateUrl: './app.html',
     styleUrl: './app.css',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App {
     protected readonly rootApplicationConfig: ApplicationConfig = {

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {productsMock} from '../../../shared/products/products.mock';
 import {
     MatCard,
@@ -26,6 +26,7 @@ import {MatButton, MatIconButton} from '@angular/material/button';
     ],
     templateUrl: './card.html',
     styleUrl: './card.css',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Card {
     readonly product = productsMock[0];
