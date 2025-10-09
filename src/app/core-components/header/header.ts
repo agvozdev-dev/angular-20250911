@@ -25,8 +25,6 @@ export class Header {
     public readonly menuClick = output<Event>();
 
     onMenuClick(event: Event) {
-        console.log('menu clicked, Header', event);
-
         this.menuClick.emit(event);
     }
 }

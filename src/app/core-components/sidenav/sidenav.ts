@@ -12,9 +12,6 @@ import {MatDrawer, MatDrawerContainer} from '@angular/material/sidenav';
 export class Sidenav {
     protected readonly counter = signal(0);
     protected counterProp = 0;
-    // public readonly sidenavOpened = input(false);
-
-    // public readonly sidenavOpenedChange = output<boolean>();
 
     public readonly sidenavOpened = model(false);
 

@@ -24,7 +24,6 @@ export class App {
     protected readonly sidenavOpenedStore = signal(false);
 
     onMenuClick(event: Event) {
-        console.log('onMenuClick App', event);
         this.sidenavOpenedStore.update(opened => !opened);
     }
 }
