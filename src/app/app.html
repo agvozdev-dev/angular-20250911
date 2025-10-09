@@ -1,11 +1,6 @@
-<!-- <app-header
-    [applicationConfig]="rootApplicationConfig"
-    (menuClick)="onMenuClick($event)"
-></app-header> -->
 <app-header
     [applicationConfig]="rootApplicationConfig"
     (menuClick)="sidenav.toggleSidenav()"
 ></app-header>
 
 <app-sidenav #sidenav></app-sidenav>
-<!-- <app-sidenav [(sidenavOpened)]="sidenavOpenedStore"></app-sidenav> -->

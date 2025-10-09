@@ -20,10 +20,4 @@ export class App {
         title: 'angular-20250911',
         imgUrl: './favicon.ico',
     };
-
-    // protected readonly sidenavOpenedStore = signal(false);
-
-    // onMenuClick(event: Event) {
-    //     this.sidenavOpenedStore.update(opened => !opened);
-    // }
 }
