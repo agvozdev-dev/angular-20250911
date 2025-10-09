@@ -2,6 +2,7 @@ import {
     ChangeDetectionStrategy,
     Component,
     computed,
+    effect,
     input,
     InputSignal,
     output,
@@ -23,6 +24,12 @@ export class Header {
     public readonly applicationConfig = input.required<ApplicationConfig>();
 
     public readonly menuClick = output<Event>();
+
+    constructor() {
+        effect(() => {
+            console.log(this.applicationConfig());
+        });
+    }
 
     onMenuClick(event: Event) {
         this.menuClick.emit(event);

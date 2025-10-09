@@ -21,9 +21,9 @@ export class App {
         imgUrl: './favicon.ico',
     };
 
-    protected readonly sidenavOpenedStore = signal(false);
+    // protected readonly sidenavOpenedStore = signal(false);
 
-    onMenuClick(event: Event) {
-        this.sidenavOpenedStore.update(opened => !opened);
-    }
+    // onMenuClick(event: Event) {
+    //     this.sidenavOpenedStore.update(opened => !opened);
+    // }
 }
