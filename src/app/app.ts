@@ -21,12 +21,4 @@ export class App {
         title: 'angular-20250911',
         imgUrl: './favicon.ico',
     };
-
-    protected readonly needProdTemplate = signal(false);
-
-    constructor() {
-        setInterval(() => {
-            this.needProdTemplate.update(value => !value);
-        }, 1000);
-    }
 }

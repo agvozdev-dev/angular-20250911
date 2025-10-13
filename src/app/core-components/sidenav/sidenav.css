@@ -10,7 +10,6 @@
     height: 100%;
 }
 
-/* ::ng-deep.example-sidenav-content { */
 .example-sidenav-content {
     display: flex;
     height: 100%;
@@ -18,10 +17,6 @@
     padding: 10px;
     box-sizing: border-box;
 }
-
-/* ::ng-deep span {
-    color: aqua !important;
-} */
 
 .example-sidenav {
     padding: 20px;
