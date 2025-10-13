@@ -21,4 +21,19 @@ export class App {
         title: 'angular-20250911',
         imgUrl: './favicon.ico',
     };
+
+    readonly switchTemplate = signal(false);
+    readonly closeTemplate = signal(true);
+
+    constructor() {
+        setInterval(() => {
+            this.toggleTemplate();
+        }, 3000);
+    }
+
+    private toggleTemplate() {
+        this.switchTemplate.set(!this.switchTemplate());
+        // or
+        this.closeTemplate.set(!this.closeTemplate());
+    }
 }
