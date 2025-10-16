@@ -9,8 +9,6 @@ type DataContext<Data> = {
     selector: '[appMyNgFor]',
 })
 export class MyNgFor<Data> {
-    // public readonly items = input.required<Data[] | null | undefined>();
-    // public readonly appMyNgForItems = input.required<Data[] | null | undefined>();
     public readonly appMyNgForOf = input.required<Data[] | null | undefined>();
 
     private readonly template = inject<TemplateRef<DataContext<Data>>>(TemplateRef);
