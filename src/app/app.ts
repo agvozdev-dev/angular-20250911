@@ -3,6 +3,7 @@ import {Header} from './core-components/header/header';
 import {ProductsList} from './pages/products-list/products-list';
 import {Sidenav} from './core-components/sidenav/sidenav';
 import {MatList, MatListItem} from '@angular/material/list';
+import {PopupHost} from './core-components/popup-host/popup-host';
 
 export type ApplicationConfig = {
     title: string;
@@ -11,7 +12,7 @@ export type ApplicationConfig = {
 
 @Component({
     selector: 'app-root',
-    imports: [Header, ProductsList, Sidenav, MatList, MatListItem],
+    imports: [Header, ProductsList, Sidenav, MatList, MatListItem, PopupHost],
     templateUrl: './app.html',
     styleUrl: './app.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
