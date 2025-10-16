@@ -1,15 +1,8 @@
-<!-- <app-header
-    [applicationConfig]="rootApplicationConfig"
-></app-header> -->
-
-<!-- <app-products-list></app-products-list> -->
-
 <app-header
     [applicationConfig]="rootApplicationConfig"
     (menuClick)="sidenav.toggleSidenav()"
 ></app-header>
 
-<!-- <app-sidenav #sidenav [navigationTemplate]="needProdTemplate() ? navigationTemplate : navigationTemplateTest"> -->
 <app-sidenav #sidenav>
     <div ngProjectAs="drawer-content">
         <h2 content-select>{{rootApplicationConfig.title}}</h2>
@@ -23,20 +16,21 @@
     <app-products-list></app-products-list>
 </app-sidenav>
 
-<!-- <ng-template #navigationTemplate>
-    <h2>{{rootApplicationConfig.title}}</h2>
-    <mat-list role="list">
-        <mat-list-item role="listitem">Item 1</mat-list-item>
-        <mat-list-item role="listitem">Item 2</mat-list-item>
-        <mat-list-item role="listitem">Item 3</mat-list-item>
-    </mat-list>
-</ng-template>
+<!-- Homework stand -->
 
-<ng-template #navigationTemplateTest>
-    <h2>Test title</h2>
-    <mat-list role="list">
-        <mat-list-item role="listitem">Item 4</mat-list-item>
-        <mat-list-item role="listitem">Item 5</mat-list-item>
-        <mat-list-item role="listitem">Item 6</mat-list-item>
-    </mat-list>
-</ng-template> -->
+<!-- Switch template -->
+<!-- <app-popup-host [template]="switchTemplate() ? first : second"></app-popup-host> -->
+
+<!-- or -->
+
+<!-- Close template -->
+<app-popup-host [template]="!closeTemplate() ? first : null"></app-popup-host>
+
+<ng-template #first>
+    <h2>First</h2>
+    <p>Is first template</p>
+</ng-template>
+<ng-template #second>
+    <h2>Second</h2>
+    <p>Is second template</p>
+</ng-template>
