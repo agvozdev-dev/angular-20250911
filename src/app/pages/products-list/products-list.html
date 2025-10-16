@@ -1,3 +1,95 @@
-<ng-template #cardTemplate let-productData="data" let-product>
+<!-- <ng-template #cardTemplate let-productData="data" let-product>
     <app-card class="card" [product]="product"></app-card>
-</ng-template>
+</ng-template> -->
+
+<!-- <ng-template appMyNgFor [items]="this.products()" let-product>
+    <app-card class="card" [product]="product"></app-card>
+</ng-template> -->
+
+<!-- <ng-template appMyNgFor [appMyNgForOf]="this.products()" let-product>
+    <app-card class="card" [product]="product"></app-card>
+</ng-template> -->
+
+<!-- <ng-template [ngIf]="this.products()" [ngIfElse]="loaderTemplate"> -->
+<!-- <ng-container *ngIf="this.products(); else: loaderTemplate;"> -->
+<!-- <ng-template ngFor [ngForOf]="this.products()" [ngForTrackBy]="customTrackBy" let-product let-currentIndex="index"> -->
+<!-- <app-card
+            *ngFor="let product; of: this.products(); trackBy: customTrackBy; let currentIndex = index"
+            class="card"
+            [product]="product"
+        ></app-card> -->
+<!-- <app-card
+            *ngFor="let product; of: this.products(); ngForOf as items; trackBy: customTrackBy; let currentIndex = index;"
+            class="card"
+            [product]="items[currentIndex]"
+        ></app-card> -->
+<!-- <app-card
+            *ngFor="let product; of: this.products() as items; trackBy: customTrackBy; index as currentIndex;"
+            class="card"
+            [product]="items[currentIndex]"
+        ></app-card> -->
+<!-- <app-card
+            *ngFor="let product of this.products(); trackBy: customTrackBy"
+            class="card"
+            [product]="product"
+        ></app-card> -->
+<!-- </ng-template> -->
+<!-- </ng-container> -->
+
+<!-- <ng-container *ngIf="this.products() as products; else: loaderTemplate;">
+    <app-card
+        *ngFor="let product of products; trackBy: customTrackBy"
+        class="card"
+        [product]="product"
+    ></app-card>
+</ng-container>
+
+<ng-template #loaderTemplate>
+    <mat-spinner></mat-spinner>
+</ng-template> -->
+
+<!-- @if (this.products()?.length > 0) {
+    <app-card
+        *ngFor="let product of this.products(); trackBy: customTrackBy"
+        class="card"
+        [product]="product"
+    ></app-card>
+} @else if (this.products()?.length === 0) {
+    Empty
+} @else {
+    <mat-spinner></mat-spinner>
+} -->
+
+<!-- @if (this.products(); as products) { -->
+<!-- $index $count $first $last $even $odd -->
+<!-- @for (product of products; track product._id; let currentIndex = $index) { -->
+<!-- {{$index}} {{$first}} -->
+<!-- {{currentIndex}} -->
+<!-- <app-card class="card" [product]="product"></app-card>
+    } @empty {
+        <p>Продуктов нет :(</p>
+    } -->
+<!-- @for (product of products; track customTrackBy($index, product)) {
+
+    } -->
+<!-- } @else {
+    <mat-spinner></mat-spinner>
+} -->
+
+@if (this.products(); as products) { @for (product of products; track product._id) {
+<app-card class="card" [product]="product"></app-card>
+} } @else {
+<mat-spinner></mat-spinner>
+}
+
+<!-- @switch (variable) {
+    @case ('caseA') {
+        Case A
+    }
+    @case ('caseB') {
+        Case B
+    }
+    @default {
+        Default case
+    }
+} -->

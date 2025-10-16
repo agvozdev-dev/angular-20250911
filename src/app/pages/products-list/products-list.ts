@@ -10,37 +10,45 @@ import {
 import {Card} from './card/card';
 import {productsMock} from '../../shared/products/products.mock';
 import {Product} from '../../shared/products/product.type';
-
-type ProductContext = {
-    $implicit: Product;
-};
+import {MyNgFor} from '../../shared/my-ng-for/my-ng-for';
+import {NgFor, NgIf} from '@angular/common';
+import {MatProgressSpinner} from '@angular/material/progress-spinner';
 
 @Component({
     selector: 'app-products-list',
-    imports: [Card],
+    imports: [Card, MyNgFor, NgFor, NgIf, MatProgressSpinner],
     templateUrl: './products-list.html',
     styleUrl: './products-list.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductsList {
-    readonly products = signal(productsMock);
-
-    private readonly cardTemplate = viewChild.required<TemplateRef<ProductContext>>('cardTemplate');
-    private readonly cardViewContainer = viewChild.required('cardTemplate', {
-        read: ViewContainerRef,
-    });
+    readonly products = signal<Product[] | null>(null);
 
     constructor() {
-        this.insertCards();
+        this.loadProducts();
     }
 
-    private insertCards() {
-        effect(() => {
-            this.products().forEach(product => {
-                this.cardViewContainer().createEmbeddedView(this.cardTemplate(), {
-                    $implicit: product,
-                });
-            });
-        });
+    private loadProducts() {
+        // setTimeout(() => {
+        //     this.products.set(productsMock);
+        // }, 2000)
+        setTimeout(() => {
+            this.products.set([]);
+        }, 2000);
+        // setTimeout(() => {
+        //     this.products.set([...productsMock].reverse());
+        // }, 4000)
+        // setTimeout(() => {
+        //     this.products.set(productsMock.map(item => ({...item, price: 999999})));
+        // }, 4000)
+        setTimeout(() => {
+            this.products.set(productsMock);
+        }, 4000);
+    }
+
+    customTrackBy(index: number, item: Product) {
+        // return item;
+        return item._id;
+        // return item.name + item.price;
     }
 }

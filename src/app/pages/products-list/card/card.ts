@@ -33,6 +33,10 @@ export class Card {
 
     readonly buy = output<Product['_id']>();
 
+    constructor() {
+        console.log('CardComponent');
+    }
+
     onProductBuy(event: Event) {
         event.stopPropagation();
 

@@ -8,6 +8,9 @@
             "schematics": {
                 "@schematics/angular:component": {
                     "changeDetection": "OnPush"
+                },
+                "@schematics/angular:directive": {
+                    "flat": false
                 }
             },
             "root": "",

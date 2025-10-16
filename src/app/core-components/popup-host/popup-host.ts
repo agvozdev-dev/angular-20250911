@@ -1,3 +1,4 @@
+import {NgTemplateOutlet} from '@angular/common';
 import {
     ChangeDetectionStrategy,
     Component,
@@ -10,31 +11,31 @@ import {
 
 @Component({
     selector: 'app-popup-host',
-    imports: [],
+    imports: [NgTemplateOutlet],
     templateUrl: './popup-host.html',
     styleUrl: './popup-host.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PopupHost {
-    private readonly viewportViewContainer = viewChild.required('viewport', {
-        read: ViewContainerRef,
-    });
+    // private readonly viewportViewContainer = viewChild.required('viewport', {
+    //     read: ViewContainerRef,
+    // });
 
     readonly template = input<TemplateRef<unknown> | null>(null);
 
-    constructor() {
-        this.listenUpdatePopupContent();
-    }
+    // constructor() {
+    //     this.listenUpdatePopupContent();
+    // }
 
-    private listenUpdatePopupContent() {
-        effect(() => {
-            const template = this.template();
+    // private listenUpdatePopupContent() {
+    //     effect(() => {
+    //         const template = this.template();
 
-            this.viewportViewContainer().clear();
+    //         this.viewportViewContainer().clear();
 
-            if (template) {
-                this.viewportViewContainer().createEmbeddedView(template);
-            }
-        });
-    }
+    //         if (template) {
+    //             this.viewportViewContainer().createEmbeddedView(template);
+    //         }
+    //     });
+    // }
 }
