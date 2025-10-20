@@ -6,16 +6,11 @@ import {
 import {provideRouter} from '@angular/router';
 
 import {routes} from './app.routes';
-import {ProductsService} from './shared/products/products.service';
 
 export const appConfig: ApplicationConfig = {
     providers: [
         provideBrowserGlobalErrorListeners(),
         provideZoneChangeDetection({eventCoalescing: true}),
         provideRouter(routes),
-        {
-            provide: ProductsService,
-            useValue: null,
-        },
     ],
 };
