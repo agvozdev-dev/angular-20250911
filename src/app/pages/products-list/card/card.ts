@@ -10,6 +10,7 @@ import {
 import {MatIcon} from '@angular/material/icon';
 import {MatButton, MatIconButton} from '@angular/material/button';
 import {Product} from '../../../shared/products/product.type';
+import {Carousel} from '../../../shared/carousel/carousel';
 
 @Component({
     selector: 'app-card',
@@ -23,6 +24,7 @@ import {Product} from '../../../shared/products/product.type';
         MatCardContent,
         MatIconButton,
         MatButton,
+        Carousel,
     ],
     templateUrl: './card.html',
     styleUrl: './card.css',
@@ -32,10 +34,6 @@ export class Card {
     readonly product = input.required<Product>();
 
     readonly buy = output<Product['_id']>();
-
-    constructor() {
-        console.log('CardComponent');
-    }
 
     onProductBuy(event: Event) {
         event.stopPropagation();
