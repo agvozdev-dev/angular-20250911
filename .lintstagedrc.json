@@ -1,6 +1,0 @@
-{
-    "*.{ts,js}": ["npx prettier --write"],
-    "*.html": ["npx prettier --write"],
-    "*.json": ["npx prettier --write"],
-    "*.css": ["npx prettier --write"]
-}
