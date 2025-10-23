@@ -1,7 +1,25 @@
 <mat-card class="card">
     <mat-card-header>
         <mat-card-title>{{ product().name }}</mat-card-title>
-        <mat-card-subtitle>{{ product().price }} $</mat-card-subtitle>
+        <!-- <mat-card-subtitle>{{ product().price }} $</mat-card-subtitle> -->
+        <!-- <mat-card-subtitle>{{getPrice()}}</mat-card-subtitle> -->
+        <!-- <mat-card-subtitle>{{getPrice(product())}}</mat-card-subtitle> -->
+        <!-- <mat-card-subtitle>{{getPrice(product().price, 'Р')}}</mat-card-subtitle> -->
+        <mat-card-subtitle>{{product().price | myCurrency : 'Р'}}</mat-card-subtitle>
+        <!-- 
+            product().price | myCurrency : 'Р'
+                    |
+                    V
+            MyCurrencyPipe.transform(product().price, 'Р')
+        -->
+        <!-- <mat-card-subtitle>{{(product().price | currency : 'RUB' : 'symbol-narrow' : '0.0-0') | json}}</mat-card-subtitle> -->
+        <!-- <mat-card-subtitle>{{product().price | currency : 'RUB' : 'symbol-narrow' : '0.0-0' | json}}</mat-card-subtitle> -->
+        <!-- 
+            (product().price | currency : 'RUB' : 'symbol-narrow' : '0.0-0') | json
+                    |
+                    V
+            JsonPipe(CurrencyPipe.transform(product().price, 'RUB', 'symbol-narrow', '0.0-0'))
+        -->
     </mat-card-header>
     <div
         *appCarousel="let next = next of product().images; let img; let back = back"
