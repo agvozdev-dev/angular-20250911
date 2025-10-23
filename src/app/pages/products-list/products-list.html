@@ -1,5 +1,9 @@
-@if (this.products(); as products) { @for (product of products; track product._id) {
-<app-card class="card" [product]="product"></app-card>
-} } @else {
+@if (this.products(); as products) {
+<div appScrollWithLoading class="scroll-container" (loadNextData)="loadNextData()">
+    @for (product of products; track product._id) {
+    <app-card class="card" [product]="product"></app-card>
+    }
+</div>
+} @else {
 <mat-spinner></mat-spinner>
 }
