@@ -20,6 +20,6 @@ export class ProductsApiService {
     }
 
     getProduct$(id: Product['_id']): Observable<Product | undefined> {
-        return this.httpClient.get<{data: Product}>(`products/${id}`).pipe(map(({data}) => data));
+        return this.httpClient.get<{data: Product}>(`/products/${id}`).pipe(map(({data}) => data));
     }
 }
