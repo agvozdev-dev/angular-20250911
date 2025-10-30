@@ -7,8 +7,6 @@ export const routes: Routes = [
     {
         path: '',
         component: Product,
-        // canActivate: [canActivateTestGuard],
-        // canActivateChild: [canActivateChildTestGuard],
         children: [
             {
                 path: '',
@@ -18,12 +16,10 @@ export const routes: Routes = [
             {
                 path: 'type',
                 component: Type,
-                // canActivate: [canActivateTestGuard],
             },
             {
                 path: 'description',
                 component: Description,
-                // canActivate: [canActivateTestGuard],
             },
         ],
     },

@@ -5,7 +5,7 @@ import {MatProgressSpinner} from '@angular/material/progress-spinner';
 import {ScrollWithLoadingDirective} from '../../shared/scroll-with-loading/scroll-with-loading.directive';
 import {ProductsStoreService} from '../../shared/products/products-store.service';
 import {FilterByPropertyPipe} from '../../shared/filter-by-property/filter-by-property-pipe';
-import {RouterOutlet, RouterLink, Router} from '@angular/router';
+import {RouterLink} from '@angular/router';
 
 @Component({
     selector: 'app-products-list',
@@ -29,8 +29,6 @@ export class ProductsList {
 
     constructor() {
         this.productsStoreService.loadProducts();
-        // inject(Router).navigateByUrl('', {})
-        // inject(Router).navigate([], {queryParams: {}});
     }
 
     protected loadNextData() {
