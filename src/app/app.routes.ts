@@ -1,9 +1,7 @@
 import {Routes} from '@angular/router';
-import {ProductsList} from './pages/products-list/products-list';
-import {Product} from './pages/product/product';
 import {NotFound} from './pages/not-found/not-found';
-import {Type} from './pages/product/type/type';
-import {Description} from './pages/product/description/description';
+import {canDeactivateTestGuard} from './shared/test-guards/can-deactivate-test.guard';
+import {canMatchTestGuard} from './shared/test-guards/can-match-test.guard';
 
 export const routes: Routes = [
     {
@@ -13,29 +11,44 @@ export const routes: Routes = [
     },
     {
         path: 'products-list',
-        component: ProductsList,
+        loadComponent: () =>
+            import('./pages/products-list/products-list').then(m => m.ProductsList),
+        // canDeactivate: [canDeactivateTestGuard],
+        // canMatch: [canMatchTestGuard],
     },
+    // {
+    //     path: 'products-list',
+    //     loadComponent: () => import('./pages/not-found/not-found').then(m => m.NotFound),
+    // },
     {
         path: 'product/:productId',
-        component: Product,
-        children: [
-            {
-                path: '',
-                pathMatch: 'full',
-                redirectTo: 'description',
-            },
-            {
-                path: 'type',
-                component: Type,
-            },
-            {
-                path: 'description',
-                component: Description,
-            },
-        ],
+        // canActivate: [canActivateTestGuard],
+        loadChildren: () => import('./pages/product/product.routes').then(m => m.routes),
+        // children: routes, // Frop product directory
+        // children: [
+        //     {
+        //         path: '',
+        //         component: Product,
+        //         children: [
+        //             {
+        //                 path: '',
+        //                 pathMatch: 'full',
+        //                 redirectTo: 'description',
+        //             },
+        //             {
+        //                 path: 'type',
+        //                 component: Type,
+        //             },
+        //             {
+        //                 path: 'description',
+        //                 component: Description,
+        //             },
+        //         ],
+        //     }
+        // ]
     },
     {
         path: '**',
-        component: NotFound,
+        loadComponent: () => import('./pages/not-found/not-found').then(m => m.NotFound),
     },
 ];

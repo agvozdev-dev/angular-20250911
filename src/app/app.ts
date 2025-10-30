@@ -5,6 +5,7 @@ import {Sidenav} from './core-components/sidenav/sidenav';
 import {MatList, MatListItem} from '@angular/material/list';
 import {InsetShadow} from './shared/inset-shadow/inset-shadow';
 import {RouterOutlet} from '@angular/router';
+import {Counter} from './shared/counter/counter';
 
 export type ApplicationConfig = {
     title: string;
@@ -13,7 +14,7 @@ export type ApplicationConfig = {
 
 @Component({
     selector: 'app-root',
-    imports: [Header, ProductsList, Sidenav, MatList, MatListItem, InsetShadow, RouterOutlet],
+    imports: [Header, Sidenav, MatList, MatListItem, InsetShadow, RouterOutlet, Counter],
     templateUrl: './app.html',
     styleUrl: './app.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
