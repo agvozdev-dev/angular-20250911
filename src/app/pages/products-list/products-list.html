@@ -1,4 +1,4 @@
-<app-filter [brands]="getBrands()"></app-filter>
+<app-filter [brands]="brands()"></app-filter>
 
 @if (products() | filterByProperty : 'name' : ''; as products) {
 <div appScrollWithLoading class="scroll-container" (loadNextData)="loadNextData()">

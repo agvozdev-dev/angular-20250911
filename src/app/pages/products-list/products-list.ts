@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, inject, signal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import {Card} from './card/card';
 import {Product} from '../../shared/products/product.type';
 import {MatProgressSpinner} from '@angular/material/progress-spinner';
