@@ -1,0 +1,26 @@
+<form>
+    <mat-form-field appearance="fill">
+        <mat-label>Search</mat-label>
+        <input matInput />
+    </mat-form-field>
+
+    @if (hasBrandsControls) {
+        <div class="checkbox-container">
+            @for (brand of brands(); track brand) {
+                <mat-checkbox>{{ brand }}</mat-checkbox>
+            }
+        </div>
+    } @else {
+        <mat-spinner diameter="60" class="loader"></mat-spinner>
+    }
+    <div class="price-range">
+        <div>
+            Min
+            <app-counter></app-counter>
+        </div>
+        <div>
+            Max
+            <app-counter></app-counter>
+        </div>
+    </div>
+</form>

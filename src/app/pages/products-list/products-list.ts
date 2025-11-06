@@ -6,6 +6,9 @@ import {ScrollWithLoadingDirective} from '../../shared/scroll-with-loading/scrol
 import {ProductsStoreService} from '../../shared/products/products-store.service';
 import {FilterByPropertyPipe} from '../../shared/filter-by-property/filter-by-property-pipe';
 import {RouterLink} from '@angular/router';
+import {FilterComponent} from './filter/reactive/filter';
+import {BrandsService} from '../../shared/brands/brands.service';
+// import { FilterComponent } from './filter/template-driven/filter';
 
 @Component({
     selector: 'app-products-list',
@@ -15,6 +18,7 @@ import {RouterLink} from '@angular/router';
         ScrollWithLoadingDirective,
         RouterLink,
         FilterByPropertyPipe,
+        FilterComponent,
     ],
     templateUrl: './products-list.html',
     styleUrl: './products-list.css',
@@ -22,13 +26,19 @@ import {RouterLink} from '@angular/router';
 })
 export class ProductsList {
     private readonly productsStoreService = inject(ProductsStoreService);
+    private readonly brandsService = inject(BrandsService);
 
     products(): Product[] | null {
         return this.productsStoreService.getProducts();
     }
 
+    brands(): ReturnType<BrandsService['getBrands']> {
+        return this.brandsService.getBrands();
+    }
+
     constructor() {
         this.productsStoreService.loadProducts();
+        this.brandsService.loadBrands();
     }
 
     protected loadNextData() {
