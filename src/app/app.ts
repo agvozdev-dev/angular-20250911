@@ -1,11 +1,9 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {Header} from './core-components/header/header';
-import {ProductsList} from './pages/products-list/products-list';
 import {Sidenav} from './core-components/sidenav/sidenav';
 import {MatList, MatListItem} from '@angular/material/list';
 import {InsetShadow} from './shared/inset-shadow/inset-shadow';
 import {RouterOutlet} from '@angular/router';
-import {Counter} from './shared/counter/counter';
 
 export type ApplicationConfig = {
     title: string;
@@ -14,7 +12,7 @@ export type ApplicationConfig = {
 
 @Component({
     selector: 'app-root',
-    imports: [Header, Sidenav, MatList, MatListItem, InsetShadow, RouterOutlet, Counter],
+    imports: [Header, Sidenav, MatList, MatListItem, InsetShadow, RouterOutlet],
     templateUrl: './app.html',
     styleUrl: './app.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
