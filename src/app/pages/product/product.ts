@@ -37,10 +37,6 @@ export class Product {
         this.currentProductId$.pipe(takeUntilDestroyed()).subscribe(id => {
             this.productsStoreService.loadProduct(id);
         });
-
-        // console.log(
-        //     this.activatedRoute.snapshot.queryParams,
-        // )
     }
 
     getProduct(): ReturnType<ProductsStoreService['getProduct']> {
