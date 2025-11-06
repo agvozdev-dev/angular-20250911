@@ -7,6 +7,7 @@ import {isScrollReachedBottomOffcet} from './utils/is-scroll-reached-bottom-offc
     host: {
         '(scroll)': 'onScroll()',
     },
+    exportAs: 'appScrollWithLoading',
 })
 export class ScrollWithLoadingDirective {
     private readonly element = inject<ElementRef<HTMLElement>>(ElementRef).nativeElement;

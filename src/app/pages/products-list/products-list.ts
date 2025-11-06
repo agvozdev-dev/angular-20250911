@@ -4,11 +4,11 @@ import {Product} from '../../shared/products/product.type';
 import {MatProgressSpinner} from '@angular/material/progress-spinner';
 import {ScrollWithLoadingDirective} from '../../shared/scroll-with-loading/scroll-with-loading.directive';
 import {ProductsStoreService} from '../../shared/products/products-store.service';
-import {FilterByPropertyPipe} from '../../shared/filter-by-property/filter-by-property-pipe';
 import {RouterLink} from '@angular/router';
-import {FilterComponent} from './filter/reactive/filter';
+import {FilterByPropertyPipe} from '../../shared/filter-by-property/filter-by-property-pipe';
+// import {FilterComponent} from './filter/reactive/filter';
+import {FilterComponent} from './filter/template-driven/filter';
 import {BrandsService} from '../../shared/brands/brands.service';
-// import { FilterComponent } from './filter/template-driven/filter';
 
 @Component({
     selector: 'app-products-list',

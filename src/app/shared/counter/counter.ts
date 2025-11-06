@@ -35,18 +35,22 @@ export class Counter implements ControlValueAccessor {
     };
 
     writeValue(newValue: number): void {
+        console.log('writeValue', newValue);
         this.counter.set(newValue);
     }
 
     registerOnChange(onChangeCb: (newValue: number) => void): void {
+        console.log('registerOnChange', onChangeCb);
         this.onChange = onChangeCb;
     }
 
     registerOnTouched(onTouchedCb: () => void): void {
+        console.log('registerOnTouched', onTouchedCb);
         this.onTouched = onTouchedCb;
     }
 
     setDisabledState(isDisabled: boolean): void {
+        console.log('setDisabledState', isDisabled);
         this.isDisabled.set(isDisabled);
     }
 
