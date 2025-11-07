@@ -7,15 +7,18 @@
         "build:dev": "ng build --configuration development",
         "build:prod": "ng build --configuration production",
         "watch": "ng build --watch --configuration development",
+        "prettier:all": "prettier . --write",
         "test": "ng test",
         "prepare": "husky"
     },
     "private": true,
     "dependencies": {
+        "@angular/cdk": "~20.2.10",
         "@angular/common": "^20.3.0",
         "@angular/compiler": "^20.3.0",
         "@angular/core": "^20.3.0",
         "@angular/forms": "^20.3.0",
+        "@angular/material": "~20.2.10",
         "@angular/platform-browser": "^20.3.0",
         "@angular/router": "^20.3.0",
         "rxjs": "~7.8.0",
