@@ -16,8 +16,6 @@
     <div ngModelGroup="priceRange" class="price-range">
         <div>
             Min
-            <!-- <app-counter [ngModel]="minStorage()" (ngModelChange)="minStorage.set($event)"></app-counter> -->
-            <!-- <app-counter #minModel="ngModel" [(ngModel)]="minStorage"></app-counter> -->
             <app-counter #minModel="ngModel" name="min" [ngModel]="0"></app-counter>
         </div>
         <div>
@@ -28,17 +26,3 @@
 
     <button mat-button (click)="log(form.value)">Отправить</button>
 </div>
-
-<!-- {{minStorage()}}
-{{minModel.value}}
-
-<p>valid: {{minModel.valid}}</p>
-<p>invalid: {{minModel.invalid}}</p>
-<p>touched: {{minModel.touched}}</p>
-<p>untouched: {{minModel.untouched}}</p>
-<p>pristine: {{minModel.pristine}}</p>
-<p>dirty: {{minModel.dirty}}</p> -->
-
-<p>
-    {{ form.value | json }}
-</p>

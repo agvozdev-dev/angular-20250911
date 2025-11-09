@@ -1,12 +1,10 @@
 <form [formGroup]="form">
     <mat-form-field appearance="fill">
         <mat-label>Search</mat-label>
-        <!-- <input [formControl]="inputControl" matInput /> -->
-        <!-- <input [formControl]="form.get('search')" matInput /> -->
         <input formControlName="search" matInput />
     </mat-form-field>
 
-    @if (hasBrandsControls) {
+    @if (brands()) {
         <div formArrayName="brands" class="checkbox-container">
             @for (brand of brands(); track brand) {
                 <mat-checkbox [formControlName]="$index">{{ brand }}</mat-checkbox>
@@ -18,7 +16,6 @@
     <div formGroupName="priceRange" class="price-range">
         <div>
             Min
-            <!-- <app-counter [formControl]="minCounterControl"></app-counter> -->
             <app-counter formControlName="min"></app-counter>
         </div>
         <div>
@@ -27,13 +24,3 @@
         </div>
     </div>
 </form>
-
-<!-- {{minCounterControl.value}} -->
-{{ minCounterControlValue() }}
-
-<p>valid: {{ minCounterControl.valid }}</p>
-<p>invalid: {{ minCounterControl.invalid }}</p>
-<p>touched: {{ minCounterControl.touched }}</p>
-<p>untouched: {{ minCounterControl.untouched }}</p>
-<p>pristine: {{ minCounterControl.pristine }}</p>
-<p>dirty: {{ minCounterControl.dirty }}</p>
