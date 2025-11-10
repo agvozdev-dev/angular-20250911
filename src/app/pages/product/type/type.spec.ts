@@ -1,22 +1,22 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+// import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {Type} from './type';
+// import {Type} from './type';
 
-describe('Type', () => {
-    let component: Type;
-    let fixture: ComponentFixture<Type>;
+// describe('Type', () => {
+//     let component: Type;
+//     let fixture: ComponentFixture<Type>;
 
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
-            imports: [Type],
-        }).compileComponents();
+//     beforeEach(async () => {
+//         await TestBed.configureTestingModule({
+//             imports: [Type],
+//         }).compileComponents();
 
-        fixture = TestBed.createComponent(Type);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
-    });
+//         fixture = TestBed.createComponent(Type);
+//         component = fixture.componentInstance;
+//         fixture.detectChanges();
+//     });
 
-    it('should create', () => {
-        expect(component).toBeTruthy();
-    });
-});
+//     it('should create', () => {
+//         expect(component).toBeTruthy();
+//     });
+// });

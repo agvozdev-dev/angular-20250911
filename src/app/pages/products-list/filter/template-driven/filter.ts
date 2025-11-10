@@ -5,6 +5,8 @@ import {MatProgressSpinner} from '@angular/material/progress-spinner';
 import {Counter} from '../../../../shared/counter/counter';
 import {FormsModule} from '@angular/forms';
 import {MatAnchor} from '@angular/material/button';
+import {JsonPipe} from '@angular/common';
+import {IsStringValidator} from './validators/is-string.validator/is-string.validator';
 
 @Component({
     selector: 'app-filter',
@@ -20,6 +22,8 @@ import {MatAnchor} from '@angular/material/button';
         Counter,
         FormsModule,
         MatAnchor,
+        JsonPipe,
+        IsStringValidator,
     ],
 })
 export class FilterComponent {

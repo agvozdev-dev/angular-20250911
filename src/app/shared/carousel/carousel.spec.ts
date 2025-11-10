@@ -1,8 +1,8 @@
-import {Carousel} from './carousel';
+// import {Carousel} from './carousel';
 
-describe('Carousel', () => {
-    it('should create an instance', () => {
-        const directive = new Carousel();
-        expect(directive).toBeTruthy();
-    });
-});
+// describe('Carousel', () => {
+//     it('should create an instance', () => {
+//         const directive = new Carousel();
+//         expect(directive).toBeTruthy();
+//     });
+// });

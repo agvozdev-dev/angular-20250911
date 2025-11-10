@@ -1,7 +1,15 @@
 <div #form="ngForm" ngForm>
     <mat-form-field appearance="fill">
         <mat-label>Search</mat-label>
-        <input name="search" matInput [ngModel]="''" />
+        <input
+            #searchModel="ngModel"
+            name="search"
+            matInput
+            appIsStringValidator
+            required
+            minlength="3"
+            [ngModel]="''"
+        />
     </mat-form-field>
 
     @if (brands()) {
@@ -26,3 +34,6 @@
 
     <button mat-button (click)="log(form.value)">Отправить</button>
 </div>
+
+{{ searchModel.errors | json }}
+{{ searchModel.getError('isStringValidator') | json }}

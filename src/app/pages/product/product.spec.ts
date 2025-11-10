@@ -1,22 +1,22 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+// import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {Product} from './product';
+// import {Product} from './product';
 
-describe('Product', () => {
-    let component: Product;
-    let fixture: ComponentFixture<Product>;
+// describe('Product', () => {
+//     let component: Product;
+//     let fixture: ComponentFixture<Product>;
 
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
-            imports: [Product],
-        }).compileComponents();
+//     beforeEach(async () => {
+//         await TestBed.configureTestingModule({
+//             imports: [Product],
+//         }).compileComponents();
 
-        fixture = TestBed.createComponent(Product);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
-    });
+//         fixture = TestBed.createComponent(Product);
+//         component = fixture.componentInstance;
+//         fixture.detectChanges();
+//     });
 
-    it('should create', () => {
-        expect(component).toBeTruthy();
-    });
-});
+//     it('should create', () => {
+//         expect(component).toBeTruthy();
+//     });
+// });

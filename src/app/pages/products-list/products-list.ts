@@ -6,8 +6,8 @@ import {ScrollWithLoadingDirective} from '../../shared/scroll-with-loading/scrol
 import {ProductsStoreService} from '../../shared/products/products-store.service';
 import {RouterLink} from '@angular/router';
 import {FilterByPropertyPipe} from '../../shared/filter-by-property/filter-by-property-pipe';
-import {FilterComponent} from './filter/reactive/filter';
-// import {FilterComponent} from './filter/template-driven/filter';
+// import {FilterComponent} from './filter/reactive/filter';
+import {FilterComponent} from './filter/template-driven/filter';
 import {BrandsService} from '../../shared/brands/brands.service';
 
 @Component({
