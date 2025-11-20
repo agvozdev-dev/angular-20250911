@@ -1,7 +1,13 @@
 <mat-toolbar>
-    <button matIconButton aria-label="Example icon-button with menu icon" class="example-icon">
+    <button
+        matIconButton
+        aria-label="Example icon-button with menu icon"
+        class="example-icon"
+        (click)="menuClick($event)"
+    >
         <mat-icon>menu</mat-icon>
     </button>
+    <img alt="Icon" [ngSrc]="imgUrl" [width]="30" [height]="30" />
     <span>{{title}}</span>
     <span class="example-spacer"></span>
     <button
